@@ -1,3 +1,7 @@
 [deps]
+CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 Franklin = "713c75ef-9fc9-4b05-94a9-213340da978e"
+MixedModelsMakie = "b12ae82c-6730-437f-aff9-d2c38332a376"
+MixedModelsSim = "d5ae56c5-23ca-4a1f-b505-9fc4796fc1fe"
 NodeJS = "2bd173c7-0d6d-553b-b6af-13a54713934c"

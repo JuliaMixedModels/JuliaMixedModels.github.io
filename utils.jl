@@ -112,3 +112,21 @@ end
 function hfun_current_tag()
     return replace(locvar("fd_tag"), "_" => " ")
 end
+
+
+@delay function hfun_page_tags()
+  pagetags = globvar("fd_page_tags")
+  pagetags === nothing && return ""
+  io = IOBuffer()
+  tags = pagetags[splitext(locvar("fd_rpath"))[1]] |> collect |> sort
+  several = length(tags) > 1
+  write(io, """<div class="tags">$(hfun_svg_tag())""")
+  for tag in tags[1:end-1]
+      t = replace(tag, "_" => " ")
+      write(io, """<a href="/tag/$tag/">$t</a>, """)
+  end
+  tag = tags[end]
+  t = replace(tag, "_" => " ")
+  write(io, """<a href="/tag/$tag/">$t</a></div>""")
+  return String(take!(io))
+end

@@ -754,6 +754,12 @@ git-tree-sha1 = "00ae93cdbad8e9b260379758cb6449e54e5f0ea5"
 uuid = "b12ae82c-6730-437f-aff9-d2c38332a376"
 version = "0.3.13"
 
+[[deps.MixedModelsSim]]
+deps = ["LinearAlgebra", "MixedModels", "PooledArrays", "PrettyTables", "Random", "Statistics", "Tables"]
+git-tree-sha1 = "96ce9a3dd9499fd679a4ffd494d339d50248da0e"
+uuid = "d5ae56c5-23ca-4a1f-b505-9fc4796fc1fe"
+version = "0.2.6"
+
 [[deps.Mmap]]
 uuid = "a63ad114-7e13-5084-954f-fe012c677804"
 
