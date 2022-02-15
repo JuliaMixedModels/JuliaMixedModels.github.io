@@ -17,10 +17,7 @@ using MixedModels
 using MixedModelsMakie
 using MKL
 fm1 &#61; fit&#40;MixedModel, @formula&#40;reaction ~ 1 &#43; days &#43; &#40;1&#43;days|subj&#41;&#41;, MixedModels.dataset&#40;:sleepstudy&#41;&#41;
-shrinkageplot&#40;fm1&#41;</code></pre><pre><code class="plaintext code-output">ArgumentError: Package MixedModels not found in current path:
-- Run `import Pkg; Pkg.add("MixedModels")` to install the MixedModels package.
-
-</code></pre>
+shrinkageplot&#40;fm1&#41;</code></pre><pre><code class="plaintext code-output">Figure()</code></pre>
 <h2 id=tags ><a href="#tags" class=header-anchor >Tags</a></h2>
 <div class=tags ><a href="/previews/PR1/tag/blog/">blog</a>, <a href="/previews/PR1/tag/franklinjl/">franklinjl</a></div>
 <h2 id=comments ><a href="#comments" class=header-anchor >Comments</a></h2>
