@@ -1,0 +1,3 @@
+ArgumentError: Package MixedModels not found in current path:
+- Run `import Pkg; Pkg.add("MixedModels")` to install the MixedModels package.
+

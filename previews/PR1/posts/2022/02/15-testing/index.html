@@ -1,0 +1,42 @@
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/previews/PR1/libs/highlight/github.min.css"> <link rel=stylesheet  href="/previews/PR1/css/franklin.css"> <link rel=stylesheet  href="/previews/PR1/css/tufte.css"> <link rel=stylesheet  href="/previews/PR1/css/latex.css"> <link rel=stylesheet  href="/previews/PR1/css/adjust.css"> <link rel=icon  href="/previews/PR1/assets/favicon.png"> <title>Testing, testing...</title> <div id=layout > <div id=menu > <ul> <li><a href="/previews/PR1/">Home</a> </ul> </div> <div id=main > <div class=franklin-content > <h1 id=title ><a href="#title" class=header-anchor >Testing, testing...</a></h1> <div class=franklin-toc ><ol><li><a href="#basic_formatting">Basic formatting</a><li><a href="#code_block">Code block</a><ol><li><a href="#not_executed">Not executed</a><li><a href="#executed">Executed</a></ol><li><a href="#tags">Tags</a><li><a href="#comments">Comments</a></ol></div> <p>How hard is it to create small one-off examples and deploy them immediately?</p> <h2 id=basic_formatting ><a href="#basic_formatting" class=header-anchor >Basic formatting</a></h2> <p>See also <a href="https://franklinjl.org/syntax/markdown/">here</a></p> <div class=ctable ><table><tr><th align=left >A<th align=left >header<tr><td align=left >yes<td align=left >true<tr><td align=left >no<td align=left >false</table></div> <p>This has a footnote<sup id="fnref:1"><a href="#fndef:1" class=fnref >[1]</a></sup></p> <table class=fndef  id="fndef:1"> <tr> <td class=fndef-backref ><a href="#fnref:1">[1]</a> <td class=fndef-content >footnote definition </table> <h2 id=code_block ><a href="#code_block" class=header-anchor >Code block</a></h2> <h3 id=not_executed ><a href="#not_executed" class=header-anchor >Not executed</a></h3> <pre><code class=language-julia >x &#61; 3</code></pre>
+<h3 id=executed ><a href="#executed" class=header-anchor >Executed</a></h3>
+<pre><code class=language-julia >using DataFrames
+DataFrame&#40;; a&#61;&#91;1,2&#93;, b&#61;&#91;&quot;one&quot;, &quot;two&quot;&#93;&#41;</code></pre><pre><code class="plaintext code-output">2×2 DataFrame
+ Row │ a      b
+     │ Int64  String
+─────┼───────────────
+   1 │     1  one
+   2 │     2  two</code></pre>
+<pre><code class=language-julia >using LinearAlgebra, Random
+Random.seed&#33;&#40;555&#41;
+a &#61; randn&#40;5&#41;
+round&#40;norm&#40;a&#41;, sigdigits&#61;4&#41;</code></pre>
+<pre><code class="plaintext code-output">3.497</code></pre>
+<pre><code class=language-julia >using CairoMakie
+using MixedModels
+using MixedModelsMakie
+using MKL
+fm1 &#61; fit&#40;MixedModel, @formula&#40;reaction ~ 1 &#43; days &#43; &#40;1&#43;days|subj&#41;&#41;, MixedModels.dataset&#40;:sleepstudy&#41;&#41;
+shrinkageplot&#40;fm1&#41;</code></pre><pre><code class="plaintext code-output">ArgumentError: Package MixedModels not found in current path:
+- Run `import Pkg; Pkg.add("MixedModels")` to install the MixedModels package.
+
+</code></pre>
+<h2 id=tags ><a href="#tags" class=header-anchor >Tags</a></h2>
+<div class=tags ><a href="/previews/PR1/tag/blog/">blog</a>, <a href="/previews/PR1/tag/franklinjl/">franklinjl</a></div>
+<h2 id=comments ><a href="#comments" class=header-anchor >Comments</a></h2>
+    <script src="https://utteranc.es/client.js" repo="JuliaMixedModels/JuliaMixedModels.github.io"
+        issue-term=title  label=comments  theme=github-light  crossorigin=anonymous 
+        async>
+    </script>
+
+<div class=page-foot >
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Phillip Alday, Douglas Bates, and contributors. Last modified: February 15, 2022.
+    Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+</div>
+</div>
+        </div> 
+    </div> 
+    
+    
+        <script src="/previews/PR1/libs/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
