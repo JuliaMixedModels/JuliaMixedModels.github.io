@@ -53,6 +53,14 @@ round(norm(a), sigdigits=4)
 
 \show{snippet1}
 
+```!
+using CairoMakie
+using MixedModels
+using MixedModelsMakie
+fm1 = fit(MixedModel, @formula(reaction ~ 1 + days + (1+days|subj)), MixedModels.dataset(:sleepstudy))
+shrinkageplot(fm1)
+```
+
 ## Tags
 
 {{ page_tags }}
