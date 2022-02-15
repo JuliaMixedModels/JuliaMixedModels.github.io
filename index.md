@@ -2,6 +2,8 @@
 title = "Mixed effects models in Julia"
 +++
 
+# {{ title }}
+
 @@alert,alert-secondary
     The aim in the posts/notes below is to cover questions and topics that we run into online and while writing our book *Embrace Uncertainty*.
     While we try to write clearly and balance intuition with rigor, we do occasionally make mistakes.

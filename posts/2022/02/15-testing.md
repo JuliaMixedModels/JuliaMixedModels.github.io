@@ -5,7 +5,7 @@ mintoclevel = 2
 descr = """
     Testing Franklin and deployment
     """
-tags = ["Frankling", "blog"]
+tags = ["Franklin.jl", "blog"]
 +++
 
 # {{title}}
@@ -52,3 +52,11 @@ round(norm(a), sigdigits=4)
 ```
 
 \show{snippet1}
+
+## Tags
+
+{{ page_tags }}
+
+## Comments
+
+{{ addcomments }}

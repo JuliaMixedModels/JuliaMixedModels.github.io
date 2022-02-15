@@ -120,7 +120,7 @@ end
   io = IOBuffer()
   tags = pagetags[splitext(locvar("fd_rpath"))[1]] |> collect |> sort
   several = length(tags) > 1
-  write(io, """<div class="tags">$(hfun_svg_tag())""")
+  write(io, """<div class="tags">""")
   for tag in tags[1:end-1]
       t = replace(tag, "_" => " ")
       write(io, """<a href="/tag/$tag/">$t</a>, """)
@@ -129,4 +129,25 @@ end
   t = replace(tag, "_" => " ")
   write(io, """<a href="/tag/$tag/">$t</a></div>""")
   return String(take!(io))
+end
+
+## comments using utterances
+
+"""
+    {{ addcomments }}
+
+Add a comment widget, managed by utterances <https://utteranc.es>.
+"""
+function hfun_addcomments()
+    html_str = """
+        <script src="https://utteranc.es/client.js"
+            repo="JuliaMixedModels/JuliaMixedModels.github.io"
+            issue-term="title"
+            label="comments"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+        </script>
+    """
+    return html_str
 end
